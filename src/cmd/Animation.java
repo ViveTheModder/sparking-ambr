@@ -122,12 +122,12 @@ public class Animation {
 		for (int i = 0; i < numKeyframes; i++) {
 			if (contents[0] == 1) pos = 4 + (8 * numKeyframes) + (2 * i);
 			else if (contents[0] == 0) pos = 16 * (i + 1) + (8 * i);
-			System.arraycopy(ValueHandler.getByteArrayFromShort(ValueHandler.getShort(currKeyframe, bigEndian), bigEndian), 0, contents, pos, 2);
+			System.arraycopy(ValueHandler.getByteArrayFromShort(currKeyframe, bigEndian), 0, contents, pos, 2);
 			currKeyframe += step;
 		}
 		if (contents[0] == 1) posLastKeyframe = 4 + (8 * numKeyframes) + (2 * lastKeyframeIndex);
 		else if (contents[0] == 0) posLastKeyframe = 16 * (lastKeyframeIndex + 1) + (8 * lastKeyframeIndex);
-		System.arraycopy(ValueHandler.getByteArrayFromShort(ValueHandler.getShort(dstAnmFrames, bigEndian), bigEndian), 0, contents, posLastKeyframe, 2);
+		System.arraycopy(ValueHandler.getByteArrayFromShort(dstAnmFrames, bigEndian), 0, contents, posLastKeyframe, 2);
 		return contents;
 	}
 	private int getAddress(int addr) {

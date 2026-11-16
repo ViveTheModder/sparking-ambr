@@ -213,7 +213,7 @@ public class App {
 							}
 							else {
 								tk.beep();
-								String success = "ANM file has been changed in " + time + " seconds!";
+								String success = " ANM file has been changed in " + time + " seconds!";
 								JOptionPane.showMessageDialog(null, anmCnt[0] + success, App.WINDOW_TITLE, JOptionPane.INFORMATION_MESSAGE);
 							}
 						}
