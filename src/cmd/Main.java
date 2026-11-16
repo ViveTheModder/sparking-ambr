@@ -136,7 +136,7 @@ public class Main {
 					System.out.println("ERROR: Invalid endian argument!");
 					return;
 				}
-				File csv = new File("bone-ids.csv");
+				File csv = new File("./csv/bone-ids.csv");
 				if (csv.isFile()) {
 					String[] boneNames = getBoneNames(csv, false);
 					File[] dirs = new File[2];
@@ -158,7 +158,7 @@ public class Main {
 					}
 					else System.out.println("ERROR: Source and/or destination paths do NOT exist!");
 				}
-				else System.out.println("ERROR: Required CSV (bone-ids.csv) is missing!");
+				else System.out.println("ERROR: bone-ids.csv is NOT present!");
 			}
 			else if (args.length > 0) {
 				System.out.println("USAGE: java -jar \"path/to/src/anm/or/dir\" \"path/to/dst/anm/or/dir\" [bone-id-start] [bone-id-end] [endian]"); 
